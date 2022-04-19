@@ -12,7 +12,7 @@ hx, hf = rbisec(
 )
 
 
-# grafico de la funcion entre 0 y 1.4
+# grafico de la funcion entre 0.8 y 1.4
 x = [0.01 * i for i in range(80, 141)]
 y = [fun_labej2a(0.01 * i) for i in range(80, 141)]
 plt.plot(x, y)
