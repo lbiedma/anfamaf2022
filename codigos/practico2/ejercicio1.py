@@ -67,32 +67,3 @@ def rbisec(fun, I, mit, err):
     
     # Puedo retornar más de una variable si las separo con comas en el return
     return hx, hf
-
-
-### EJERCICIO 2A y C
-
-def fun_labej2a(x):
-    return 2 * x - tan(x)
-
-
-# Obtengo el historial de puntos visitados
-hx, hf = rbisec(fun_labej2a, [0.8, 1.4], mit=100, err=1e-5)
-
-# Para conseguir el grafico de la funcion entre 0.8 y 1.4 debo crear muchos puntos
-# equiespaciados en ese intervalo, puedo usar range y multiplicar.
-x = [0.01 * i for i in range(80, 141)]
-# Evalúo la función en esos puntos
-y = [fun_labej2a(0.01 * xi) for xi in x]
-
-# Para graficar, puedo hacerlo línea por línea, hago el gráfico de la función primero,
-# uniendo puntos con líneas.
-plt.plot(x, y)
-# Grafico el historial de puntos visitados, con asteriscos.
-plt.plot(hx, hf, '*')
-# Marco el punto final con un círculo negro, para mejorar la visualización.
-plt.plot(hx[-1], hf[-1], 'ok')
-# Le doy un título al gráfico.
-plt.title("Puntos Visitados")
-# Muestro el gráfico.
-plt.show()
-
