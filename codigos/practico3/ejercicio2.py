@@ -3,7 +3,7 @@ def dif_divididas(x, y):
     coefs = []
     # Genero filas de coefs
     for i in range(n):
-        coefs.append(y[:n - i])
+        coefs.append(y[:n - i].copy())
     
     # Calculo coeficientes de diferencias divididas
     for i in range(1, n):
