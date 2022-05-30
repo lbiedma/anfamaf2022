@@ -25,6 +25,7 @@ def intenumcomp(fun, a, b, N, regla):
         s = h * 2 * np.sum(evals[1::2])
 
     elif regla == "simpson":
+        # Completar con su implementación de Simpson
         pass
 
     elif regla == "trapecio":
